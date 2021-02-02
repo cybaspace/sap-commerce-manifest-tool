@@ -124,7 +124,7 @@ func main() {
 		return
 	}
 
-	manifest := parseManifest()
+	manifest := parseManifest("manifest.json")
 
 	switch strings.ToLower(flag.Args()[0]) {
 	case "version":
@@ -163,9 +163,9 @@ func readExtensioins(manifest Manifest) []string {
 	return extensions
 }
 
-func parseManifest() Manifest {
+func parseManifest(filename string) Manifest {
 
-	jsonFile, err := ioutil.ReadFile("manifest.json")
+	jsonFile, err := ioutil.ReadFile(filename)
 
 	if err != nil {
 		fmt.Println(err)
@@ -177,7 +177,7 @@ func parseManifest() Manifest {
 	//fmt.Println("----")
 	//fmt.Printf("Properties: %v\n", com.Properties)
 
-	validate(manifest)
+	//validate(manifest)
 
 	return manifest
 }

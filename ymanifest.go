@@ -115,13 +115,6 @@ type XmlExtension struct {
 var latestFlag bool
 
 func main() {
-	/*
-		flag.StringVar(&configPath, "path", "./", "Path where property files are stored")
-		fileListPtr = flag.String("files", "", "Comma separated list of property and csv files")
-		flag.StringVar(&system, "system", "", "Name of system for which properties should be considered")
-		flag.BoolVar(&verbose, "v", false, "Print information to the console")
-		flag.StringVar(&output, "output", localPropertiesFile, "Send output to a file or with '<console>' to console (default='local.properties')")
-	*/
 
 	flag.BoolVar(&latestFlag, "latest", false, "Add ':latest' tag, if patch version is missing")
 	flag.Parse()
@@ -172,7 +165,7 @@ func readExtensioins(manifest Manifest) []string {
 
 func parseManifest() Manifest {
 
-	jsonFile, err := ioutil.ReadFile("test-resources/manifest.json")
+	jsonFile, err := ioutil.ReadFile("manifest.json")
 
 	if err != nil {
 		fmt.Println(err)

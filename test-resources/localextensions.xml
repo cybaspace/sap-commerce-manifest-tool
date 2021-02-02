@@ -1,0 +1,20 @@
+<hybrisconfig xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='../bin/platform/resources/schemas/extensions.xsd'>
+  <extensions>
+    <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
+    <!--extension name='yb2bacceleratorstorefront' /-->
+    <extension name='assistedserviceservices'>Value</extension>
+    <extension name='b2bacceleratorservices' />
+    <extension name='b2bocc' />
+    <extension name='apparelstore' />
+    <extension name='commerceservices' />
+    <extension name='adminapi' />
+    <extension name='kymaintegrationbackoffice' />
+    <extension name='kymaintegrationservices' />
+    <extension name='cmsoccaddon' />
+
+<!-- maiaccelerator extensions -->
+     <extension name='maibase' />
+     <extension name='mail18n' />
+     <extension name='mail18nbackoffice' />
+  </extensions>
+</hybrisconfig>
